@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Find Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+.logo{
+	position:absolute;
+	top:0;
+	left:250px;
+}
+</style>
+<img src="http://www.up2me.co.il/imgs/91656600.jpg" class="logo">
+<body>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+        <button onclick="location.href ='UserHomePage'" class="w3-button w3-white w3-border w3-border-black w3-round-large">Home Page</button>
+        <button onclick="location.href ='addDocument'" class="w3-button w3-white w3-border w3-border-black w3-round-large">Add File</button>
+        <button onclick="location.href ='findDocument'" class="w3-button w3-white w3-border w3-border-black w3-round-large">Find File</button>
+        <button onclick="location.href ='SendMail'" class="w3-button w3-white w3-border w3-border-black w3-round-large">Send Mail To Customer</button>
+        <button onclick="location.href ='logout'" class="w3-button w3-white w3-border w3-border-black w3-round-large">log out</button>
+    </div>
+  </div>
+<form action="showDocument" method="POST">{% csrf_token %}
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+    <label for="CUSTOMER">Customer Name:</label>
+    <input type="text" id="CUSTOMER" name="CUSTOMER"><br><br>
+    <button onclick="location.href ='showDocument'"class="w3-button w3-white w3-border w3-border-black w3-round-large">FIND</button>
+    </div>
+  </div>
+</form>
+</header>
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+</body>
+</html>
